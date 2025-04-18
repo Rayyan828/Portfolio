@@ -1,216 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rayyan Abdullah | Detailed Portfolio</title>
-  <link rel="stylesheet" href="index.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <script src="https://kit.fontawesome.com/6b02152e88.js" crossorigin="anonymous"></script>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rayyan Abdullah - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header i {
+      margin: 0 0.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #002244;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav i {
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 1rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    nav i:hover {
+      color: #ffcc00;
+    }
+
+    section {
+      display: none;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeIn 0.5s;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      color: #003366;
+      border-bottom: 2px solid #003366;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 1rem;
+      cursor: pointer;
+    }
+
+    .details {
+      display: none;
+      margin-top: 0.5rem;
+      background: #e0e7ff;
+      padding: 0.75rem;
+      border-left: 4px solid #003366;
+      border-radius: 6px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #003366;
+      color: white;
+      margin-top: 3rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
 </head>
+
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="container">
-      <h1 class="logo">Rayyan</h1>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+  <header>
+    <h1>Hi, I am Rayyan Abdullah</h1>
+    <p>B.Tech in CS (AI Major), IIITDM Kancheepuram</p>
+    <p>Email: cs22b2001@iiitdm.ac.in | Phone: +91-9542119786</p>
+  </header>
+
+  <nav>
+    <i class="fas fa-user" onclick="showSection('about')" title="About Me"></i>
+    <i class="fas fa-graduation-cap" onclick="showSection('education')" title="Education"></i>
+    <i class="fas fa-certificate" onclick="showSection('certifications')" title="Certifications"></i>
+    <i class="fas fa-project-diagram" onclick="showSection('projects')" title="Projects"></i>
+    <i class="fas fa-tools" onclick="showSection('skills')" title="Skills"></i>
+    <i class="fas fa-file-alt" onclick="showSection('resume')" title="Full Resume"></i>
   </nav>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2>About Me</h2>
-      <div class="accordion">
-        <button class="accordion-btn">Personal Summary</button>
-        <div class="accordion-content">
-          <p>Enthusiastic Computer Science student with a focus on Artificial Intelligence and Optimization Techniques. Passionate about machine learning and algorithmic innovations to solve real-world challenges. Committed to continuous learning and technical excellence.</p>
-        </div>
-      </div>
-    </div>
+  <section id="about" class="active">
+    <h2>About Me</h2>
+    <p>Enthusiastic Computer Science student focused on Artificial Intelligence and Optimization Techniques. Passionate about machine learning and algorithmic innovations to solve real-world challenges.</p>
   </section>
 
-  <!-- EDUCATION -->
-  <section id="education" class="section">
-    <div class="container">
-      <h2>Education</h2>
-
-      <div class="accordion">
-        <button class="accordion-btn">B.Tech in CS (AI Major), IIITDM Kancheepuram</button>
-        <div class="accordion-content">
-          <p>Currently pursuing B.Tech in Computer Science (AI Major) at IIITDM Kancheepuram.</p>
-        </div>
-      </div>
-
-      <div class="accordion">
-        <button class="accordion-btn">Senior Secondary (CBSE), 75.49% – 2022</button>
-        <div class="accordion-content">
-          <p>Completed Senior Secondary education under CBSE with 75.49% aggregate in 2022.</p>
-        </div>
-      </div>
-
-      <div class="accordion">
-        <button class="accordion-btn">Secondary (CBSE), 81.9% – 2020</button>
-        <div class="accordion-content">
-          <p>Completed Secondary education under CBSE with 81.9% aggregate in 2020.</p>
-        </div>
-      </div>
-    </div>
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>B.Tech in Computer Science (AI Major)</strong>, IIITDM Kancheepuram</li>
+      <li>Senior Secondary (CBSE) – 75.49% (2022)</li>
+      <li>Secondary (CBSE) – 81.9% (2020)</li>
+    </ul>
   </section>
 
-  <!-- CERTIFICATIONS -->
-  <section id="certifications" class="section">
-    <div class="container">
-      <h2>Certifications & Training</h2>
-
-      <div class="accordion">
-        <button class="accordion-btn">Introduction To Data Analytics (Dec 2024)</button>
-        <div class="accordion-content">
-          <p>Internshala Trainings (Virtual).</p>
-        </div>
-      </div>
-
-      <div class="accordion">
-        <button class="accordion-btn">Data Management & Analysis With MS Excel (Dec 2024–Jan 2025)</button>
-        <div class="accordion-content">
-          <p>Internshala Trainings (Online).</p>
-        </div>
-      </div>
-
-      <div class="accordion">
-        <button class="accordion-btn">Graph Theory Camp (Jan 2025)</button>
-        <div class="accordion-content">
-          <p>3-day camp with Codeforces Master Manas Kumar Verma, mastering 11+ advanced graph techniques.</p>
-        </div>
-      </div>
-
-      <div class="accordion">
-        <button class="accordion-btn">Data Visualization With Power BI (Jan 2025–Feb 2025)</button>
-        <div class="accordion-content">
-          <p>Internshala Trainings (Online).</p>
-        </div>
-      </div>
-
-      <div class="accordion">
-        <button class="accordion-btn">SQL For Data Analysis And Insights (Feb 2025–Mar 2025)</button>
-        <div class="accordion-content">
-          <p>Internshala Trainings (Online).</p>
-        </div>
-      </div>
-    </div>
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li onclick="toggleDetails(this)">Introduction to Data Analytics<div class="details">Completed via Internshala, Dec 2024</div></li>
+      <li onclick="toggleDetails(this)">MS Excel for Data Analysis<div class="details">Completed via Internshala, Dec 2024 – Jan 2025</div></li>
+      <li onclick="toggleDetails(this)">Graph Theory Camp<div class="details">Conducted by Codeforces Master Manas Verma, Jan 2025</div></li>
+      <li onclick="toggleDetails(this)">Power BI Data Visualization<div class="details">Completed via Internshala, Jan – Feb 2025</div></li>
+      <li onclick="toggleDetails(this)">SQL for Data Analysis<div class="details">Completed via Internshala, Feb – Mar 2025</div></li>
+    </ul>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2>Projects</h2>
-
-      <!-- repeat for each project -->
-      <div class="accordion">
-        <button class="accordion-btn">Golden Search Optimization for ML (Oct 2023)</button>
-        <div class="accordion-content">
-          <ul>
-            <li>Integrated Golden Search with the Sine Cosine algorithm for balanced global/local search.</li>
-            <li>Benchmarked on standard test functions; validated via Wilcoxon Rank Sum tests.</li>
-            <li>Created full report and presentation of findings.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="accordion">
-        <button class="accordion-btn">N‑Queens Solver Using AI Techniques (Apr 2024)</button>
-        <div class="accordion-content">
-          <ul>
-            <li>Combined brute‑force, backtracking, DFS, BFS heuristics.</li>
-            <li>Applied Simulated Annealing and Genetic Algorithms for larger board sizes.</li>
-            <li>Optimized Python implementations; compared runtime and success rates.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="accordion">
-        <button class="accordion-btn">BMI Prediction & Gender Estimation via FaceNet (Dec 2024)</button>
-        <div class="accordion-content">
-          <ul>
-            <li>Extracted 512‑dim facial features using FaceNet‑PyTorch.</li>
-            <li>Reduced features to 41 via PCA (95% variance).</li>
-            <li>Linear regression for BMI (MSE=19.46, R²=0.2458); logistic regression for gender.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="accordion">
-        <button class="accordion-btn">Legal Document Classification (Dec 2024)</button>
-        <div class="accordion-content">
-          <ul>
-            <li>Built ML pipeline to classify 150+ attributes.</li>
-            <li>Reduced loan servicing errors, saving 360,000+ hours/year.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- add more as needed -->
-    </div>
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li onclick="toggleDetails(this)">Golden Search Optimization for ML<div class="details">Enhanced the Sine Cosine algorithm with Golden Search technique. Tested using benchmark functions (CEC 2014). Demonstrated superior convergence and accuracy. Statistical validation with Wilcoxon test.</div></li>
+      <li onclick="toggleDetails(this)">N-Queens Problem via AI<div class="details">Implemented various heuristic search techniques (DFS, BFS, Simulated Annealing, GA) to solve N-Queens. Visualized performance and compared solution times and accuracy.</div></li>
+      <li onclick="toggleDetails(this)">BMI & Gender Estimation from Facial Images<div class="details">Utilized FaceNet embeddings + PCA for feature extraction. Regressed BMI and classified gender using SVM. Dataset: Illinois Prisoners. Achieved high accuracy with dimensionality reduction.</div></li>
+      <li onclick="toggleDetails(this)">Legal Document Classification - J.P. Morgan<div class="details">Processed legal docs using NLP to classify 150+ attributes. Reduced loan service misclassification. Built scalable pipeline using Python and Scikit-learn.</div></li>
+      <li onclick="toggleDetails(this)">Customer & Sales Analysis – KPMG<div class="details">Analyzed customer data to identify valuable segments and retention strategies. Built dashboards with Power BI to show actionable insights and CLV.</div></li>
+      <li onclick="toggleDetails(this)">Secure HTTP/HTTPS in C<div class="details">Built low-level HTTP and HTTPS server using sockets in C. Integrated OpenSSL for TLS encryption. Learned SSL handshake, certificates, and stream encryption.</div></li>
+      <li onclick="toggleDetails(this)">Airline Dashboard with Power BI<div class="details">Cleaned and visualized airline KPI data in Power BI. Showed trends in ticket sales, cancellations, and passenger traffic. Used slicers and drill-downs for interaction.</div></li>
+      <li onclick="toggleDetails(this)">Walmart Retail Analysis<div class="details">Executed complex SQL queries for Walmart data analysis. Revealed top-performing products, customer segments, and peak times.</div></li>
+      <li onclick="toggleDetails(this)">Hostel Complaints DBMS System<div class="details">Designed and implemented complaint registration system in MySQL with triggers, stored procedures, and role-based access for admins and students.</div></li>
+    </ul>
   </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="section">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div>
-          <h3>Programming</h3>
-          <p>C, C++, Python, LaTeX</p>
-        </div>
-        <div>
-          <h3>Data & BI</h3>
-          <p>MySQL, Power BI, SQL Analysis</p>
-        </div>
-        <div>
-          <h3>AI & ML</h3>
-          <p>Machine Learning, Optimization, FaceNet</p>
-        </div>
-        <div>
-          <h3>Networking & OS</h3>
-          <p>Socket Programming, OpenSSL, Linux</p>
-        </div>
-        <div>
-          <h3>Tools</h3>
-          <p>GitHub, VS Code, Internshala</p>
-        </div>
-        <div>
-          <h3>Soft Skills</h3>
-          <p>Problem Solving, Communication, Teamwork</p>
-        </div>
-      </div>
-    </div>
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li onclick="toggleDetails(this)"><strong>Programming:</strong> C, C++, Python<div class="details">Comfortable with data structures, competitive coding, and system-level programming.</div></li>
+      <li onclick="toggleDetails(this)"><strong>Tools:</strong> GitHub, VS Code, LaTeX, Power BI, MySQL<div class="details">Experience with version control, IDEs, scientific document writing, and business analytics tools.</div></li>
+      <li onclick="toggleDetails(this)"><strong>Concepts:</strong> Networking, OS, DSA, DBMS, OOP, Compiler Design<div class="details">Strong foundation in core CS subjects and problem solving using real-world scenarios.</div></li>
+      <li onclick="toggleDetails(this)"><strong>Soft Skills:</strong> Problem Solving, Analytical Thinking, Team Collaboration<div class="details">Effective communicator, solution-driven mindset, collaborative in team-based projects and hackathons.</div></li>
+    </ul>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
+  <section id="resume">
+    <h2>Full Resume</h2>
+    <iframe src="resume.pdf" title="Rayyan Resume"></iframe>
   </section>
 
-  <footer class="footer">
-   
+  <footer>
+    <p>&copy; 2025 Rayyan Abdullah. All rights reserved.</p>
   </footer>
-  <script src="index.js"></script>
 
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+
+    function toggleDetails(element) {
+      const detail = element.querySelector('.details');
+      const allDetails = document.querySelectorAll('.details');
+      allDetails.forEach(d => {
+        if (d !== detail) d.style.display = 'none';
+      });
+      detail.style.display = detail.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </body>
+
 </html>
