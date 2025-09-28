@@ -21,10 +21,6 @@
       text-align: center;
     }
 
-    header i {
-      margin: 0 0.5rem;
-    }
-
     nav {
       display: flex;
       justify-content: center;
@@ -98,8 +94,13 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -116,6 +117,7 @@
     <i class="fas fa-graduation-cap" onclick="showSection('education')" title="Education"></i>
     <i class="fas fa-certificate" onclick="showSection('certifications')" title="Certifications"></i>
     <i class="fas fa-project-diagram" onclick="showSection('projects')" title="Projects"></i>
+    <i class="fas fa-briefcase" onclick="showSection('experience')" title="Working Experience"></i>
     <i class="fas fa-tools" onclick="showSection('skills')" title="Skills"></i>
     <i class="fas fa-file-alt" onclick="showSection('resume')" title="Full Resume"></i>
   </nav>
@@ -137,36 +139,110 @@
   <section id="certifications">
     <h2>Certifications</h2>
     <ul>
-      <li onclick="toggleDetails(this)">Introduction to Data Analytics<div class="details">Completed via Internshala, Dec 2024</div></li>
-      <li onclick="toggleDetails(this)">MS Excel for Data Analysis<div class="details">Completed via Internshala, Dec 2024 – Jan 2025</div></li>
-      <li onclick="toggleDetails(this)">Graph Theory Camp<div class="details">Conducted by Codeforces Master Manas Verma, Jan 2025</div></li>
-      <li onclick="toggleDetails(this)">Power BI Data Visualization<div class="details">Completed via Internshala, Jan – Feb 2025</div></li>
-      <li onclick="toggleDetails(this)">SQL for Data Analysis<div class="details">Completed via Internshala, Feb – Mar 2025</div></li>
+      <li onclick="toggleDetails(this)">Introduction to Data Analytics
+        <div class="details">Completed via Internshala, Dec 2024</div>
+      </li>
+      <li onclick="toggleDetails(this)">MS Excel for Data Analysis
+        <div class="details">Completed via Internshala, Dec 2024 – Jan 2025</div>
+      </li>
+      <li onclick="toggleDetails(this)">Graph Theory Camp
+        <div class="details">Conducted by Codeforces Master Manas Verma, Jan 2025</div>
+      </li>
+      <li onclick="toggleDetails(this)">Power BI Data Visualization
+        <div class="details">Completed via Internshala, Jan – Feb 2025</div>
+      </li>
+      <li onclick="toggleDetails(this)">SQL for Data Analysis
+        <div class="details">Completed via Internshala, Feb – Mar 2025</div>
+      </li>
     </ul>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <ul>
-      <li onclick="toggleDetails(this)">Golden Search Optimization for ML<div class="details">Enhanced the Sine Cosine algorithm with Golden Search technique. Tested using benchmark functions (CEC 2014). Demonstrated superior convergence and accuracy. Statistical validation with Wilcoxon test.</div></li>
-      <li onclick="toggleDetails(this)">N-Queens Problem via AI<div class="details">Implemented various heuristic search techniques (DFS, BFS, Simulated Annealing, GA) to solve N-Queens. Visualized performance and compared solution times and accuracy.</div></li>
-      <li onclick="toggleDetails(this)">BMI & Gender Estimation from Facial Images<div class="details">Utilized FaceNet embeddings + PCA for feature extraction. Regressed BMI and classified gender using SVM. Dataset: Illinois Prisoners. Achieved high accuracy with dimensionality reduction.</div></li>
-      <li onclick="toggleDetails(this)">Legal Document Classification - J.P. Morgan<div class="details">Processed legal docs using NLP to classify 150+ attributes. Reduced loan service misclassification. Built scalable pipeline using Python and Scikit-learn.</div></li>
-      <li onclick="toggleDetails(this)">Customer & Sales Analysis – KPMG<div class="details">Analyzed customer data to identify valuable segments and retention strategies. Built dashboards with Power BI to show actionable insights and CLV.</div></li>
-      <li onclick="toggleDetails(this)">Secure HTTP/HTTPS in C<div class="details">Built low-level HTTP and HTTPS server using sockets in C. Integrated OpenSSL for TLS encryption. Learned SSL handshake, certificates, and stream encryption.</div></li>
-      <li onclick="toggleDetails(this)">Airline Dashboard with Power BI<div class="details">Cleaned and visualized airline KPI data in Power BI. Showed trends in ticket sales, cancellations, and passenger traffic. Used slicers and drill-downs for interaction.</div></li>
-      <li onclick="toggleDetails(this)">Walmart Retail Analysis<div class="details">Executed complex SQL queries for Walmart data analysis. Revealed top-performing products, customer segments, and peak times.</div></li>
-      <li onclick="toggleDetails(this)">Hostel Complaints DBMS System<div class="details">Designed and implemented complaint registration system in MySQL with triggers, stored procedures, and role-based access for admins and students.</div></li>
+      <li onclick="toggleDetails(this)">Golden Search Optimization for ML
+        <div class="details">Enhanced the Sine Cosine algorithm with Golden Search technique. Tested using benchmark functions (CEC 2014). Demonstrated superior convergence and accuracy. Statistical validation with Wilcoxon test.</div>
+      </li>
+      <li onclick="toggleDetails(this)">N-Queens Problem via AI
+        <div class="details">Implemented various heuristic search techniques (DFS, BFS, Simulated Annealing, GA) to solve N-Queens. Visualized performance and compared solution times and accuracy.</div>
+      </li>
+      <li onclick="toggleDetails(this)">BMI & Gender Estimation from Facial Images
+        <div class="details">Utilized FaceNet embeddings + PCA for feature extraction. Regressed BMI and classified gender using SVM. Dataset: Illinois Prisoners. Achieved high accuracy with dimensionality reduction.</div>
+      </li>
+      <li onclick="toggleDetails(this)">Legal Document Classification - J.P. Morgan
+        <div class="details">Processed legal docs using NLP to classify 150+ attributes. Reduced loan service misclassification. Built scalable pipeline using Python and Scikit-learn.</div>
+      </li>
+      <li onclick="toggleDetails(this)">Customer & Sales Analysis – KPMG
+        <div class="details">Analyzed customer data to identify valuable segments and retention strategies. Built dashboards with Power BI to show actionable insights and CLV.</div>
+      </li>
+      <li onclick="toggleDetails(this)">Secure HTTP/HTTPS in C
+        <div class="details">Built low-level HTTP and HTTPS server using sockets in C. Integrated OpenSSL for TLS encryption. Learned SSL handshake, certificates, and stream encryption.</div>
+      </li>
+      <li onclick="toggleDetails(this)">Airline Dashboard with Power BI
+        <div class="details">Cleaned and visualized airline KPI data in Power BI. Showed trends in ticket sales, cancellations, and passenger traffic. Used slicers and drill-downs for interaction.</div>
+      </li>
+      <li onclick="toggleDetails(this)">Walmart Retail Analysis
+        <div class="details">Executed complex SQL queries for Walmart data analysis. Revealed top-performing products, customer segments, and peak times.</div>
+      </li>
+      <li onclick="toggleDetails(this)">Hostel Complaints DBMS System
+        <div class="details">Designed and implemented complaint registration system in MySQL with triggers, stored procedures, and role-based access for admins and students.</div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Working Experience</h2>
+    <ul>
+      <li onclick="toggleDetails(this)">
+        <strong>Machine Learning Intern – Bluestock Fintech</strong> 
+        <em>(May 2025 – July 2025, Remote)</em>
+        <div class="details">
+          <ul>
+            <li>Developed ML models for fundamental stock analysis, improving prediction accuracy of company performance metrics.</li>
+            <li>Integrated APIs and automated pipelines to fetch and preprocess real-time financial data into MySQL.</li>
+            <li>Designed normalized database schema and built dashboards for portfolio and stock performance insights.</li>
+            <li>Documented daily progress, performed code reviews, and presented findings to mentors.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li onclick="toggleDetails(this)">
+        <strong>Data Analytics Intern – KPMG</strong>
+        <div class="details">
+          <ul>
+            <li>Worked on customer and sales analysis to identify valuable customer segments, retention strategies, and KPIs.</li>
+            <li>Built interactive dashboards using Power BI for actionable insights.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li onclick="toggleDetails(this)">
+        <strong>NLP Intern – J.P. Morgan (Virtual)</strong>
+        <div class="details">
+          <ul>
+            <li>Developed a legal document classification pipeline using NLP techniques.</li>
+            <li>Reduced misclassification in loan servicing through scalable solutions built with Python and Scikit-learn.</li>
+          </ul>
+        </div>
+      </li>
     </ul>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
     <ul>
-      <li onclick="toggleDetails(this)"><strong>Programming:</strong> C, C++, Python<div class="details">Comfortable with data structures, competitive coding, and system-level programming.</div></li>
-      <li onclick="toggleDetails(this)"><strong>Tools:</strong> GitHub, VS Code, LaTeX, Power BI, MySQL<div class="details">Experience with version control, IDEs, scientific document writing, and business analytics tools.</div></li>
-      <li onclick="toggleDetails(this)"><strong>Concepts:</strong> Networking, OS, DSA, DBMS, OOP, Compiler Design<div class="details">Strong foundation in core CS subjects and problem solving using real-world scenarios.</div></li>
-      <li onclick="toggleDetails(this)"><strong>Soft Skills:</strong> Problem Solving, Analytical Thinking, Team Collaboration<div class="details">Effective communicator, solution-driven mindset, collaborative in team-based projects and hackathons.</div></li>
+      <li onclick="toggleDetails(this)"><strong>Programming:</strong> C, C++, Python
+        <div class="details">Comfortable with data structures, competitive coding, and system-level programming.</div>
+      </li>
+      <li onclick="toggleDetails(this)"><strong>Tools:</strong> GitHub, VS Code, LaTeX, Power BI, MySQL
+        <div class="details">Experience with version control, IDEs, scientific document writing, and business analytics tools.</div>
+      </li>
+      <li onclick="toggleDetails(this)"><strong>Concepts:</strong> Networking, OS, DSA, DBMS, OOP, Compiler Design
+        <div class="details">Strong foundation in core CS subjects and problem solving using real-world scenarios.</div>
+      </li>
+      <li onclick="toggleDetails(this)"><strong>Soft Skills:</strong> Problem Solving, Analytical Thinking, Team Collaboration
+        <div class="details">Effective communicator, solution-driven mindset, collaborative in team-based projects and hackathons.</div>
+      </li>
     </ul>
   </section>
 
